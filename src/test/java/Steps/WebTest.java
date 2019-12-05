@@ -28,8 +28,6 @@ public class WebTest extends Base
     {
         geturl();
         logger.info("Opening WebSite..");
-        String email = person.getEmail();
-        System.out.println(email);
     }
 
     @And("^User clicks on the subscribe button$")
@@ -189,6 +187,16 @@ public class WebTest extends Base
         String expectMessage = "Card number incorrect or incompatible";
         assertTrue("There has been an error..!",(driver.findElement(By.xpath("//td[@class=\"ncoltxtc\"]")).getText().equalsIgnoreCase(expectMessage)));
         logger.info("Check error message");
+        try {
+            Thread.sleep(2000);
+        } catch (Exception e)
+        {
+            logger.debug("Thread Interrupt Exception!!",e);
+        } finally {
+            driver.quit();
+        }
+
+
     }
 
 }
