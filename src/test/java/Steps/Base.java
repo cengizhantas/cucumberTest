@@ -61,19 +61,7 @@ public class Base {
 
         }
     }
-
-//    public WebElement findElement(By by)
-//    {
-//        return driver.findElement(by);
-//    }
-//
-//    public void waitElementUntilDisappear(By by, TimeOut timeOut)
-//    {
-//        WebDriverWait wait = new WebDriverWait(driver, timeOut.value);
-//        wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
-//        findElement(by).click();
-//    }
-
+    
 
     public void findElementClick(String path, Pather type){
         try {
